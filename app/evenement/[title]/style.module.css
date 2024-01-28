@@ -1,0 +1,26 @@
+.root{
+    margin-top: 15vh;
+}
+
+.title{
+    color: #2487a3 ;
+}
+
+@media only screen and (max-width: 425px) {
+    .root{
+        margin-top: 1vh;
+    }
+  }
+
+.live{
+    width: 50%;
+    display: block;
+    padding: 1.5vh 2vh;
+    background-color: #2487a3;
+    margin: 2vh auto;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}

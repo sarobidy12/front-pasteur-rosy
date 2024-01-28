@@ -1,0 +1,76 @@
+/* styles.module.css */
+.root_podcast{
+  height: 60vh;
+  width: 80%;
+  margin: 5vh auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 450px) {
+  .root_podcast{
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+    height: auto;
+    gap: 20px;
+  }
+}
+
+.title_podcast{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8a820;
+  margin-top: 5vh;
+}
+
+@media (max-width: 450px) {
+  .title_podcast{
+    position: relative;
+    font-size: 20.5px;
+  }
+}
+
+.title_podcast span{
+  font-size: 30px;
+  margin-right: 1vh;
+  font-weight: bold;
+}
+
+.imageContainer {
+    width: 40%;
+    height: 80%;
+    position: relative;
+    border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+  .imageContainer{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.imageContainer img{
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.textContainer{
+  width: 60%;
+  background-color: #048b9a;
+  padding: 1vh 1.5vh;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+@media (max-width: 450px) {
+  .textContainer{
+    width: 100%;
+  }
+}
+/* Add additional styling as needed */

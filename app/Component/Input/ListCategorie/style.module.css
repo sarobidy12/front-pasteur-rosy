@@ -1,0 +1,31 @@
+.cardCategory{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.cardCategory span{
+    margin-right: .75vh;
+}
+
+.inlineCategory{
+    display: inline-block;
+    margin: 1%;
+    padding: 1vh 1.5vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.inlineCategory:hover{
+    background-color: white;
+    color: black;
+}
+
+.active{
+    background-color: white;
+    color: black;
+}

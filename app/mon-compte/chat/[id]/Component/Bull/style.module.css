@@ -1,0 +1,40 @@
+/* ChatMessage.module.css */
+
+.chatMessage {
+    display: flex;
+    align-items: flex-end;
+    margin: 10px;
+    gap: 9px;
+  }
+  
+  .messageContent {
+    max-width: 70%;
+  }
+  
+  .currentUser {
+    flex-direction: row-reverse; /* Reverse the order of the flex items for the current user */
+  }
+    
+  .chatMessage img {
+    border-radius: 25px;
+  }
+  
+  .userName {
+    margin-bottom: 5px;
+    color: #aaa;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .messageText {
+    margin: 0;
+    padding: 1vh;
+    background-color: #aaaaaa21;
+    border-radius: 10px;
+  }
+
+  .curentMessageText{
+    background-color: #048b9a;
+    color: white;
+  }

@@ -1,0 +1,132 @@
+/* styles/Hero.module.css */
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .textContainer {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .textContainer h1{
+    font-size: 45px;
+    font-weight: bold;
+    color: #00435e;
+  }
+
+  .textContainer p{
+    color: #aaa;
+    font-size: 15px;
+  }
+  
+  .textContainer p span:nth-child(1)
+  {
+    font-size: 35px;
+    color: #f8a820;
+    transform: rotate(180deg)
+  }
+  .textContainer p span:nth-child(2){
+    color: #f8a820;
+    font-size: 35px;
+    margin-top: -15px;
+    position: relative;
+    top: 10px;
+}
+  .imageContainer {
+    width: 35%;
+    height: 50%;
+    text-align: center;
+     border-radius: 50%;
+    border: 5px solid #00435e;
+    overflow: hidden;
+    position: relative;
+    background-color: #00435e;
+  }
+
+  .imageContainer img{
+    position: relative;
+    top: 5px;
+  }
+  
+  /* Adjust styles for smaller screens */
+  @media (max-width: 767px) {
+    .heroContainer {
+      padding: 4vh 0;
+      flex-direction: column-reverse;
+    justify-content: flex-start;
+      width: 100%;
+      height: auto;
+    }
+  
+    .textContainer,
+    .imageContainer {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .textContainer {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2vh;
+    }
+
+    .imageContainer {
+      width: 270px;
+      height: 270px;
+      margin: 0 auto;
+    }
+
+  .textContainer h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .textContainer p{
+    color: #aaa;
+    font-size: 17px;
+    margin: 0;
+    text-align: center;
+
+  }
+}
+
+.link{
+  text-decoration: none;
+  padding: 1vh 2vh;
+  border: 3px solid;
+  margin: 0.75vh 0.5vh;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 600ms;
+  display: flex;
+  align-items:center;
+}
+
+.fill{
+  border: 3px solid #00435e;
+  background-color: #00435e;
+  color: white;
+}
+
+.empty{
+  color: #00435e;
+}
+
+.link:hover{
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .link{
+    width: 100%;
+    margin: 1vh 0vh;
+  }
+}

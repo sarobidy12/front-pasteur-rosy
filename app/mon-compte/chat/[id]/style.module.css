@@ -1,0 +1,212 @@
+.root{
+    width: 90%;
+    margin: 15vh auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 15% 70% 15%;
+}
+
+@media only screen and (max-width: 425px) {
+    .root{
+        margin: 1vh auto;
+        display: block;
+    }
+}
+.description{
+    margin: 0;
+    padding: 0;
+}
+
+.description h2{
+    margin: 0;
+    padding: 0;
+    color: #2487a3;
+}
+
+@media only screen and (max-width: 425px) {
+    .description P{
+        display: none;
+    }
+}
+
+.userConnected{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 425px) {
+    .userConnected{
+        margin-top: 2.5vh;
+        margin-bottom: 12vh;
+    }
+}
+
+.userConnected h3{
+    margin: 0;
+    padding: 0;
+    background-color: #2487a3;
+    padding: 1vh;
+    color: white;
+    font-size: 15px;
+}
+
+.userConnected ul{
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: hidden;
+}
+
+
+.userConnected ul::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.userConnected ul::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: white;
+  border-radius: 0 15px 15px 0;
+}
+
+.userConnected ul::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #2487a3;
+}
+
+.userConnected ul li{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 20% 80%;
+    margin-top: 1vh;
+    background-color: #aaaaaa21;
+    border-radius: 10px;
+    padding: 0.5vh;
+    align-items: center;
+}
+
+.userConnected ul li span{
+    font-size: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.userConnected ul li img {
+    border-radius: 40px;
+}
+
+.userConnected ul li h2{
+    margin: 0;
+    padding: 0;
+    font-size: 12.5px;
+    width: 90%;
+}
+
+.message{
+    height: 60vh;
+}
+
+.input{
+    width: 100%;
+    background-color: #aaaaaa21;
+    border-radius: 10px;
+    padding: 1vh;
+    position: relative;
+}
+
+.input form{
+    display: flex;
+    align-items: center;
+}
+.input  input{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 4vh;
+}
+
+@media only screen and (max-width: 425px) {
+    .input  input{
+        width: 90%;
+    }
+}
+
+.input  button{
+    border: none;
+    display: inline;
+    width: 5%;
+}
+
+.input button:active{
+    transform: scale(0.9);
+}
+
+.messageContent{
+    width: 100%;
+    height: 75vh;
+    overflow-y: auto;
+}
+
+.content{
+    width: 100%;
+    height: auto;
+}
+
+.message{
+    height: auto;
+    display: block;
+    width: 70%;
+    padding: 1vh;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 1vh;
+}
+
+.community{
+    background-color: #aaaaaa21;
+    left: 0;
+}
+
+.me{
+    background-color: #2487a3;
+    color: white;
+    left: 30%;
+}
+
+.messageContent::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.messageContent::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: white;
+  border-radius: 0 15px 15px 0;
+}
+
+.messageContent::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #2487a3;
+}
+
+.getLastedMessage{
+    display: flex;
+    justify-content: center;
+}
+
+.getLastedMessage button{
+    border: none;
+    background-color: #aaaaaa21;
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 10px;
+}

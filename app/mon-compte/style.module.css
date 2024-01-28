@@ -1,0 +1,138 @@
+.root{
+    width: 50%;
+    margin: 15rem auto;
+}
+
+.root a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 48%;
+    float: left;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 5vh;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5%;
+    border-radius: 10px;
+    color: #048b9a;
+    border: 3px solid;
+}
+
+.root a span{
+    font-size: 3rem;
+    margin-right: 0.75vh;
+}
+
+@media only screen and (max-width: 425px) {
+    .root{
+        margin-top: 2rem;
+        width: 90%;
+        position: relative;
+    }
+
+    .root a{
+        width: 100%;
+        float: none;
+        padding: 2vh;
+        font-size: 0.75rem;
+        margin: 1rem 0;
+    }
+
+    .root a span{
+        font-size: 1.5rem;
+    }
+}
+
+.profil{
+    color: #048b9a;
+    text-align: center;
+}
+
+.profil img{
+    border-radius: 120px;
+}
+
+.profil span{
+    font-size: 6rem;
+}
+
+.info{
+    width: 40%;
+    margin: 10rem auto;
+}
+
+@media only screen and (max-width: 425px) {
+    .info{
+        margin: 1rem auto;
+        width: 95%;
+    }
+}
+
+.info h1{
+    display: flex;
+    align-items: center;
+    color: #048b9a;
+}
+
+@media only screen and (max-width: 425px) {
+    .info h1{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+.info input{
+    width: 100%;
+    margin: 0.5vh 0;
+    padding: 1vh 1.75vh;
+    border-radius: 10px;
+    border: 2px solid #048b9a;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+}
+
+@media only screen and (max-width: 425px) {
+    .info input{
+        padding: 1.75vh 2.75vh;
+    }
+}
+
+.info button{
+    background-color: #048b9a;
+    padding: 1.5vh;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+.info span{
+    font-size: 4rem;
+}
+
+@media only screen and (max-width: 425px) {
+    .info span{
+        font-size: 35px;
+    }
+}
+
+.success{
+    background-color: #8cdc8d;
+    padding: 1vh;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 128, 0, 0.548);
+    display: flex;
+    align-items: center;
+    color: green;
+    font-weight: bold;
+}
+
+.success span {
+    font-size: 30px;
+    margin-right: 3px;
+    color: green;
+}

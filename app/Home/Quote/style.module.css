@@ -1,0 +1,42 @@
+.containter{
+  background-color: #285860;
+  border-radius: 25px;
+  padding: 1.5vh 2vh;
+  color: white;
+  margin: 2vh auto;
+  width: 80%;
+  position: fixed;
+  bottom: 10px;
+  left: 10%;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 425px) {
+  .containter{
+      width: 98%;
+      left: 1%;
+      position: fixed;
+  }
+}  
+
+.containter h2{
+  margin: 0.5vh 0;
+  padding: 0;
+}
+
+.containter p{
+  margin: 0.5vh 0;
+  padding: 0;
+}
+
+.containter button{
+  width: 100px;
+  padding: 1vh;
+  border-radius: 10px;
+  background-color: #285860;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  margin-top: 1.5vh;
+  cursor: pointer;
+}

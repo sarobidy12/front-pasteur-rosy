@@ -1,0 +1,34 @@
+.root{
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    background-color: #2487a3;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 25vh auto;
+    padding-bottom: 1vh;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
+@media (max-width: 450px) {
+    .root {
+        gap: 7px;
+        grid-template-columns: 25% 75%;
+        z-index: 1000;
+        height: 85px;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 3.75vh;
+    }
+}
+  
+.contentImg {
+    position: relative;
+}
+
+.contentImg img{
+    border-radius: 10px;
+    margin: 0.5vh;
+}

@@ -1,0 +1,61 @@
+.card{
+    width: 100%;
+    margin: 1.5vh auto;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    position: relative;
+    border: none;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+}     
+
+.card:active{
+    transition: .6ms;
+    transform: scale(0.98);
+    outline: none;
+}
+
+.card:hover{
+    transition: 1.2ms;
+    transform: scale(0.99);
+}
+
+.content{
+    margin: 1vh;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 23.5px;
+    color: #005681;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+}
+
+.description{
+    font-size: 15px;
+    color: #aaa;
+    width: 95%;
+    margin: 0;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .title{
+        font-size: 18px;
+    }
+
+    .description{
+        font-size: 14px;
+        margin-top: 1.5vh;
+    }
+    
+  }

@@ -1,0 +1,16 @@
+.root{
+    width: 100%;
+    padding: 1vh;
+    border-radius: 15px;
+    border: 2px dashed #048b9a;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 1vh 0 1vh 0 ;
+    color: #048b9a;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,41 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.pageHeader {
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8a820;
+  margin-top: 5vh;
+}
+
+.title span{
+  font-size: 30px;
+  margin-right: 1vh;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .title{
+      font-size: 20.5px;
+  }
+}

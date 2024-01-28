@@ -1,0 +1,66 @@
+.container{
+    width:80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+    .container{
+        width:90%;
+        position: relative;
+    }
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8a820;
+    margin-top: 5vh;
+}
+
+.title span{
+    font-size: 30px;
+    margin-right: 1vh;
+    font-weight: bold;
+}
+
+@media (max-width: 450px) {
+    .title{
+        font-size: 20.5px;
+    }
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 450px) {
+    .grid{
+        height: auto;
+        width: calc(300px *10);
+        overflow-y: hidden;
+        padding-bottom: 1vh;
+    }
+}
+
+.itemCard{
+    width: calc(20%);
+}
+
+@media (max-width: 450px) {
+    .itemCard{
+        width: 300px;
+        display: inline;
+    }
+
+    .scrollContainer{
+        width: 110%;
+        overflow-x: scroll;
+        position: relative;
+        left: -5%;
+    }
+}
+

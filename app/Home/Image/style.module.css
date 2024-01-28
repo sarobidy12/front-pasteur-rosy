@@ -1,0 +1,114 @@
+.containter{
+  border-radius: 25px;
+  padding: 1vh 2vh;
+  color: white;
+  margin: 2vh auto;
+  width: 80%;
+}
+
+@media only screen and (max-width: 425px) {
+  .containter{
+    width: 95%;
+  }
+}
+
+.link{
+  margin: 1vh;
+  padding: 1.5vh 3vh;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  display: block;
+  text-decoration: none;
+  background-color: #EFEFEF;
+  color: black;
+}
+
+.containter button{
+  margin: 1vh;
+  padding: 1.5vh 3vh;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8a820;
+  margin-top: 5vh;
+}
+
+.title span{
+  font-size: 30px;
+  margin-right: 1vh;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .title{
+      font-size: 20.5px;
+  }
+}
+
+
+.active{
+  background-color: #2487a3 ;
+  color: white;
+}
+
+
+.listImage{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  width: 24%;
+  padding-bottom: 24%;
+  position: relative;
+  display: inline-block;
+  margin: 0.5%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.AlbumInside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 425px) {
+  .listImage{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    width: 48%;
+    padding-bottom: 48%;
+    position: relative;
+    display: inline-block;
+    margin: 0.5%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .AlbumInside{
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    white-space: nowrap;
+    width: 95%;
+    justify-content: flex-start;
+    padding-bottom: 1vh;
+  }
+}  
+
+.carousel{
+  height: 0;
+  overflow: hidden;
+}

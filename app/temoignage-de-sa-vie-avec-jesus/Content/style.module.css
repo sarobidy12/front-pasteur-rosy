@@ -1,0 +1,43 @@
+.root{
+    min-height: 75vh;
+}
+
+.cardLink{
+    width: 100%;
+    margin: 1vh auto;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}       
+
+.content{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 12ch auto;
+}
+
+.img{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.contentImg{
+    width: 100%;
+}
+
+.contentText{
+    width: 100%;
+}
+
+.text{
+    margin: 1.5vh 0;
+    font-size: 15px;
+    color: #005681;
+}

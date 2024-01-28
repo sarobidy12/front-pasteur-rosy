@@ -1,0 +1,148 @@
+/* styles/Grid.module.css */
+.gridContainer {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .gridContainer {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.gridItem {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #10202096;
+  width: calc(31.5%); /* Adjust the width and spacing as needed */
+  box-sizing: border-box;
+  height: 250px;
+  float: left;
+  margin: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .6ms;
+}
+
+.gridItem:hover{
+  transform: scale(0.98);
+}
+
+.bgAbove{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+@media (max-width: 450px) {
+  .gridItem {
+    width: calc(48.5%); /* Adjust the width and spacing as needed */
+    margin: 4px 2.25px;
+    float: left;
+  }
+}
+
+.gridItem h2{
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  .gridItem h2{
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+.gridItem span{
+  font-size: 40px;
+  color: white;
+}
+
+.gridItem p{
+  color: white;
+  width: 90%;
+}
+
+@media (max-width: 450px) {
+  .gridItem p{
+    width: 85%;
+    font-size: 14.5px;
+  }
+}
+/* Ensure the first item takes up the full height in the first column */
+.gridItem:nth-child(1) {
+  background-color: #10202096;
+  height: 520px;
+  background-image: url('./asset/enseignement.jpg');
+  background-position-x: -100px;
+}
+
+.gridItem:nth-child(2) {
+  background-image: url('./asset/thinkingPastor.jpg');
+}
+
+.gridItem:nth-child(3) {
+  background-image: url('./asset/bestKristian.jpg');
+}
+
+.gridItem:nth-child(4) {
+  background-image: url('./asset/lifeWithJesus.jpg');
+  background-position-y: -100px;
+}
+
+.gridItem:nth-child(5) {
+  background-image: url('./asset/podcast.png');
+}
+
+@media (max-width: 450px) {
+  .gridItem:nth-child(1) {
+    background-position-x: 0px;
+  }
+
+  .gridItem:nth-child(4) {
+    background-position-y: 0px;
+  }
+}
+/* 
+.gridItem:nth-child(2) {
+  background-color: #102020;
+}
+
+.gridItem:nth-child(3) {
+  background-color: #f8b83f;
+}
+
+.gridItem:nth-child(4) {
+  background-color: #285860;
+}
+
+.gridItem:nth-child(4) {
+  background-color: #2487a3;
+} */
+
+/* Adjust styles for smaller screens */
+@media (max-width: 450px) {
+  .gridItem:nth-child(1) {
+    background-color: #10202096;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.endFLoating{
+  clear: both;
+}

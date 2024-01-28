@@ -1,0 +1,50 @@
+.root{
+    margin: 2.5vh 0;
+}
+
+@media only screen and (max-width: 425px) {
+    .root{
+        margin: 6.5vh auto;
+        width: 85%;
+    }
+}
+
+.root h1{
+    margin: 0;
+    color:#048b9a;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 425px) {
+    .root h1{
+        font-size: 20px;
+    }
+}
+
+.answer{
+    background-color: rgba(0, 0, 0, 0.158);
+    padding: 0.25vh 2.5vh;
+    border-radius: 10px;
+}
+
+.iframe{
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    height: 50vh;
+}
+
+@media only screen and (max-width: 975px) {
+    .iframe{
+        height: 25vh;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .iframe{
+        width: 100%;
+        border-radius: 15px;
+        border: none;
+        height: 35vh;
+    }
+}

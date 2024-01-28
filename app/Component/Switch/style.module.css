@@ -1,0 +1,43 @@
+/* Switch.module.css */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    border: 5px solid #048b9a;
+    margin-right: 1vh;
+}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: -1.8px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 30px;
+    background-color: #048b9a;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #048b9a;
+  }
+  
+  input:checked + .slider:before {
+    background-color: #fff; /* Reset color to blue when checked */
+    transform: translateX(31px);
+  }
+  

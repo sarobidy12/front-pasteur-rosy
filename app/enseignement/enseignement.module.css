@@ -1,0 +1,15 @@
+.hero{
+    position: relative;
+    margin: 8% auto;
+    padding: 0;
+    width: 85%;
+}
+
+.hero h2{
+    margin: 0;
+}
+
+.input{
+    width: 30%;
+}
+ 

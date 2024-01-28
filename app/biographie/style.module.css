@@ -1,0 +1,11 @@
+.root{
+    margin: 15vh auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 425px) {
+    .root{
+        margin: 1vh auto;
+        width: 95%;
+    }
+  }
