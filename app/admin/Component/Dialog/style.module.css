@@ -1,0 +1,131 @@
+/* src/Modal.module.css */
+.modal {
+  top: 120%;
+  position: fixed;
+  text-align: left;
+  background: #444444;
+  transition: opacity 0.25s ease;
+  transition: .6s;
+  width: 30%;
+  height: auto;
+  z-index: 150;
+  padding: 2vh;
+  border-radius: 15px;
+}
+
+.littleWidth{
+  width: 30%;
+  left: 35%;
+}
+
+.middleWidh{
+  width: 60%;
+  left: 20%;
+}
+
+.fullWidh{
+  width: 100%;
+  left: 0;
+  overflow: auto;
+  max-height: 100vh;
+  min-height: 100vh;
+  position: fixed;
+  border-radius: 0;
+}
+
+.modal.show {
+  top: calc(30% - 140px);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 425px) {
+  .modal.show {
+    top:0;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}
+
+.modal.show.fullWidh {
+  top: 0;
+  opacity: 1;
+  display: block;
+}
+
+.modalBg {
+  opacity: 1;
+  transition: .6s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 125;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalState {
+  display: none;
+}
+
+.modalState:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalState:checked + .modal .modalInner {
+  top: 0;
+}
+
+.modalInner {
+  transition: top 0.25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #444444bd;
+  border-radius: 5px;
+  padding-top: 2em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 60%;
+}
+
+.modalClose {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modalClose:after,
+.modalClose:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modalClose:hover:after,
+.modalClose:hover:before {
+  background: #aaa;
+}
+
+.modalClose:before {
+  transform: rotate(-45deg);
+}

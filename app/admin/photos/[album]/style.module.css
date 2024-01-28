@@ -1,0 +1,31 @@
+.cardUpload{
+    border: 1px solid white;
+    padding: 1.5vh;
+}
+
+.listImage{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    width: 24%;
+    padding-bottom: 24%;
+    position: relative;
+    display: inline-block;
+    margin: 0.5%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 425px) {
+    .listImage{
+        width: 48%;
+        padding: 24%;
+    }
+}
+
+.checked{
+    position: absolute;
+    z-index: 15;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}

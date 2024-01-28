@@ -8,6 +8,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  env: {
+    urlApi: process.env.API_BACK,
+    urlApiSocket: process.env.SOCKET,
+  },
 };
 
 module.exports = nextConfig;

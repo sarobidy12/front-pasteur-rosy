@@ -1,0 +1,40 @@
+.container{
+    width:80%;
+    margin: 5% auto;
+    color: white;
+}
+
+.body{
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.logoAdmin{
+    font-weight: bold;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.flexContent {
+    width:60%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 425px) {
+    .flexContent {
+        width:95%;
+    }
+}

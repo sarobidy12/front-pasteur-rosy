@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "tdd": "jest --watch",
-    "start": "node server.js"
+    "prod": "node server.js"
   },
   "dependencies": {
     "@editorjs/delimiter": "^1.4.0",

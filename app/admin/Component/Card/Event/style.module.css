@@ -1,0 +1,39 @@
+/* PlantCard.module.css */
+.card {
+    display: flex;
+    flex: 0 0 auto;
+    background: #444444bd;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .card:hover {
+    background: #44444456;
+  }
+  
+  .cardPicWrap {
+    border-radius: 5px 0 0 5px;
+    width: 200PX;
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .cardPicWrap img {
+    position: absolute; 
+  }
+  
+  .cardContent {
+    padding: 1em;
+  }
+  
+  .cardContent h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+ 

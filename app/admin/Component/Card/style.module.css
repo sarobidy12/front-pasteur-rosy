@@ -1,0 +1,56 @@
+.container{
+    width: 30%;
+    height: 250px;
+    border: 1px solid white;
+    color: white;
+    padding: 2vh;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 425px) {
+    .container{
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+}
+
+.addAlbum{
+    width: 24%;
+    height: 250px;
+    border: 2px dashed white;
+    color: white;
+    padding: 2vh;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 0.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 500ms;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 425px) {
+    .addAlbum{
+        width: 48%;
+        height: 24%;
+        font-size: 20px;
+    }
+}
+
+.addAlbum:active{
+    transform: scale(0.9);
+}
+
+/* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+padding-bottom: 24%;
+position: relative;
+display: inline-block;
+border-radius: 10px;
+overflow: hidden; */
