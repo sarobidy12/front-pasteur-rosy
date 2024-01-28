@@ -115,6 +115,7 @@ const usePodcast = () => {
       const { data } = await callApi(`podcast/${id}`, "DELETE", {});
       setListPodcast(state.listPodcast.filter((x: any) => x._id !== id));
       setLoadingUpdate(false);
+      toggleDialog();
     } catch (err: any) {
       console.error(err);
     } finally {
