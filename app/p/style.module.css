@@ -4,6 +4,7 @@
     justify-content: center;
     position: relative;
     margin-top: 12.5rem;
+    margin-top: 15rem;
 }
 
 @media (max-width: 450px) {
@@ -11,6 +12,7 @@
       width: 100%;
       margin-top: 5rem;
       margin-left: 0%;
+      margin-top: 5rem;
     }
 }
 

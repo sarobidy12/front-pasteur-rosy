@@ -43,10 +43,10 @@ const useCategory = () => {
   };
 
   const onChange = (e: any) => {
-    const { name, checked, value } = e.target;
+    const { name, value } = e.target;
     setSelected({
       ...state.selected,
-      [name]: checked !== undefined ? checked : value,
+      [name]: value,
     });
   };
 

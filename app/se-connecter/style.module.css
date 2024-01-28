@@ -4,12 +4,14 @@
     justify-content: center;
     position: relative;
     margin-top: 15rem;
+    margin-bottom: 15rem;
 }
 
 @media (max-width: 450px) {
     .root {
       width: 90%;
       margin-top: 6rem;
+        margin-bottom: 6rem;
       margin-left: 5%;
     }
 }

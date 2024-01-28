@@ -47,12 +47,11 @@ const useTeaching = () => {
   };
 
   const handleChange = (params: any) => {
-    const { name, checked, value } = params.target;
+    const { name, value } = params.target;
 
-    console.log("checked", checked);
     const newData = {
       ...state.selected,
-      [name]: checked !== undefined ? checked : value,
+      [name]: value,
     };
     setSelected({
       ...newData,
