@@ -19,7 +19,7 @@ const Admin = () => {
         <Card
           icon={<span className="material-symbols-outlined">folder_copy</span>}
           title="Categorie"
-          description="Cree ,Modifier votre categorie, le categorie c'est theme de votre contenue."
+          description="Cree, Modifier votre categorie, le categorie c'est theme de votre contenue."
           href="/admin/categorie"
         />
         <Card
