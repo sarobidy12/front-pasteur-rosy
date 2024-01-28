@@ -1,5 +1,5 @@
 .container{
-    width: 30%;
+    width: 32%;
     height: 250px;
     border: 1px solid white;
     color: white;
@@ -7,9 +7,10 @@
     text-decoration: none;
     border-radius: 15px;
     margin: 5px;
+    display: inline-table;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
     .container{
         width: 100%;
         height: auto;

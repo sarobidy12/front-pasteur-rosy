@@ -9,17 +9,17 @@ const Admin = () => {
         <span className="material-symbols-outlined">admin_panel_settings</span>
       </h1>
       <h2 className={style.title}>Administration des contenues.</h2>
-      <div className="grid">
+      <div>
         <Card
           icon={<span className="material-symbols-outlined">image</span>}
           title="Photo"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Organiser l'affichage de vos photos en creons des albums pour retrouver facilement vos photos"
           href="/admin/photos"
         />
         <Card
           icon={<span className="material-symbols-outlined">folder_copy</span>}
           title="Categorie"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Cree ,Modifier votre categorie, le categorie c'est theme de votre contenue."
           href="/admin/categorie"
         />
         <Card
@@ -27,21 +27,21 @@ const Admin = () => {
             <span className="material-symbols-outlined">military_tech</span>
           }
           title="Chretient qui fait des explois"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Raconter les histoires de  ses chretient qui on fait des explois dans leur domaine respective"
           href="/admin/ckretient-qui-fait-exploits"
         />
         <Card
           icon={
             <span className="material-symbols-outlined">escalator_warning</span>
           }
-          title=" Témoignage de la vie avec Jésus"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          title="Témoignage de la vie avec Jésus"
+          description="Partage a travair un temoignage comment Jesus a changer leur vie."
           href="/admin/vie-avec-jesus"
         />
         <Card
           icon={<span className="material-symbols-outlined">event_note</span>}
           title="Les evenements"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Dite nous, l'agendat du pasteur dans les prochaine jour."
           href="/admin/event"
         />
         <Card
@@ -49,13 +49,13 @@ const Admin = () => {
             <span className="material-symbols-outlined">psychology_alt</span>
           }
           title="Que penses-tu pasteur"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="J'ai une question pasteur que penses-tu ?"
           href="/admin/que-penses-tu-pasteur"
         />
         <Card
           icon={<span className="material-symbols-outlined">forum</span>}
           title="Conversation"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Ajouter des groupes de discution pour echanger avec la communauter."
           href="/admin/conversation"
         />
         <Card
@@ -65,20 +65,19 @@ const Admin = () => {
             </span>
           }
           title="La biographie du pasteur"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Raconter-nous l'histoire du pasteur."
           href="/admin/biographie"
         />
         <Card
-          icon={
-          <span className="material-symbols-outlined">headphones</span>}
+          icon={<span className="material-symbols-outlined">headphones</span>}
           title="podcast"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Administrer les enseignements en audio."
           href="/admin/podcast"
         />
         <Card
           icon={<span className="material-symbols-outlined">headphones</span>}
           title="A decouvivre"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Dites-nous des choses que l'on dois decouvrire sur Jesus,sur ma vie spirituel."
           href="/admin/a-decouvivre"
         />
         <Card
@@ -88,7 +87,7 @@ const Admin = () => {
             </span>
           }
           title="Enseignement"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
+          description="Administrer les enseignements."
           href="/admin/enseignement"
         />
         <Card
@@ -96,8 +95,8 @@ const Admin = () => {
             <span className="material-symbols-outlined">support_agent</span>
           }
           title="Support"
-          description="L'administration des photos peut également concerner le partage d'images avec d'autres personnes, que ce soit par le biais de réseaux sociaux, de plateformes de partage de photos ou par des moyens plus traditionnels."
-          href="/admin/a-decouvivre"
+          description="Des problemes et anomalie durrant l'utilisation, le support est la pour vous assister et assurrer que tout fonctionnement correctement."
+          href="/admin/Support"
         />
       </div>
     </div>
