@@ -17,7 +17,8 @@ const DialogChat: FC = () => {
   return (
     <Dialog open={openDialog} onClose={toggleDialog}>
       <h2 className="text-center">
-        {selected.type === "create" ? "Ajouter un" : "Modifer ce"} cannal de conversarion
+        {selected.type === "create" ? "Ajouter un" : "Modifer ce"} cannal de
+        conversarion
       </h2>
       <form onSubmit={onSubmit}>
         <div>
@@ -27,7 +28,7 @@ const DialogChat: FC = () => {
             onChange={onChange}
             type="text"
             name="name"
-            value={selected.name}
+            value={selected.name || ""}
             placeholder="Nom du album"
             className="input-admin"
           />
@@ -51,12 +52,16 @@ const DialogChat: FC = () => {
               <button type="submit" className="btn-admin">
                 {selected.type === "create" ? "Ajouter" : "Modifer"}
               </button>
-              <button
-                className="btn-delete-admin"
-                onClick={onDelete(selected._id)}
-              >
-                Supprimer
-              </button>
+              {selected.type !== "create" ? (
+                <button
+                  className="btn-delete-admin"
+                  onClick={onDelete(selected._id)}
+                >
+                  Supprimer
+                </button>
+              ) : (
+                <></>
+              )}
             </>
           )}
         </div>
