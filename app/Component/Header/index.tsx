@@ -28,9 +28,6 @@ const Header = () => {
                 />
               </Link>
             </div>
-            {/* <div className={styles.inputcontainer}>
-        <input type="text" placeholder="Search" className={styles.input} />
-      </div> */}
             <nav className={styles.nav}>
               <Link href="/" className={`${styles.link} ${styles.linkIcon}`}>
                 <span className="material-symbols-outlined">home</span>
@@ -78,15 +75,9 @@ const Header = () => {
                   ) : (
                     <>
                       {info.gender === "homme" ? (
-                        <span
-                          className="material-symbols-outlined"
-                        >
-                          face
-                        </span>
+                        <span className="material-symbols-outlined">face</span>
                       ) : (
-                        <span
-                          className="material-symbols-outlined"
-                        >
+                        <span className="material-symbols-outlined">
                           face_3
                         </span>
                       )}

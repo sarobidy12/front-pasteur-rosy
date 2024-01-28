@@ -13,7 +13,7 @@ const Card: FC<Ichild> = React.memo(function child({
   description,
 }) {
   return (
-    <button className={style.card} onClick={onClick}>
+    <button className={style.card} onClick={onClick} data-aos="zoom-in">
       <div className={style.content}>
         <h2 className={style.title}>{title}</h2>
         {description && <p className={style.description}>{description}</p>}

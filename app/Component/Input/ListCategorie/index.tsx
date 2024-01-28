@@ -17,7 +17,7 @@ const ListCategorie: FC<IListCategorie> = ({ name, value, onChange }) => {
   const getCategory = async (cat: boolean) => {
     setLoading(true);
     try {
-      const res = await fetch(`${urlApi}/category?favory=${cat}`);
+      const res = await fetch(`${urlApi}/category?favorite=${cat}`);
       const json = await res.json();
       setList(json);
     } catch (err: any) {

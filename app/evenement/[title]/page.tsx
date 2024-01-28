@@ -20,7 +20,7 @@ export async function generateMetadata(
   // read route params
   // fetch data
   const current = await fetch(
-    `${urlApi}/event/filterByTitle?title=${params.title}`,
+    `${urlApi}/event/filterByTitle?title=${params.title}`
   ).then((res) => res.json());
 
   return {
@@ -45,23 +45,25 @@ const Evenement: FC<Props> = async ({ params }) => {
   return (
     <div className="container m-b-10">
       <div className={style.root}>
-        <Chip date={currentEvent.date} />
-        {/* <Image
-          src={img(currentEvent.path)}
-          alt={currentEvent.title}
-          width={250}
-          height={250}
-        /> */}
-        <h1 className={`${style.title} ${rowdies_.className}`}>
+        <Chip date={currentEvent.date}  />
+        <h1
+          className={`${style.title} ${rowdies_.className}`}
+          data-aos="fade-left"
+        >
           {currentEvent.title}
         </h1>
-        <PreviewRenderer data={currentEvent.description} />
+        <PreviewRenderer
+          data={currentEvent.description}
+          data-aos="fade-right"
+        />
         {currentEvent.live && (
           <Link href={currentEvent.live} target="_blank" className={style.live}>
             Participer au live
           </Link>
         )}
-        {currentEvent.place && <Map place={currentEvent.place} />}
+        {currentEvent.place && (
+          <Map place={currentEvent.place} data-aos="flip-right" />
+        )}
       </div>
     </div>
   );

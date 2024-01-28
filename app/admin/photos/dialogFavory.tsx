@@ -3,12 +3,12 @@ import React, { FC, useRef, useState } from "react";
 import Dialog from "@/app/admin/Component/Dialog";
 import usePicture from "@/app/Store/Picture";
 
-interface IDialogFavory {
+interface IDialogfavorite {
   open: boolean;
   handleClose: () => void;
 }
 
-const DialogFavory: FC<IDialogFavory> = ({ open, handleClose }) => {
+const Dialogfavorite: FC<IDialogfavorite> = ({ open, handleClose }) => {
   const [loading, setLoading] = useState(false);
 
   const { listAlbum, handleFavorite, saveFavoriteAlbum } = usePicture();
@@ -59,4 +59,4 @@ const DialogFavory: FC<IDialogFavory> = ({ open, handleClose }) => {
   );
 };
 
-export default DialogFavory;
+export default Dialogfavorite;

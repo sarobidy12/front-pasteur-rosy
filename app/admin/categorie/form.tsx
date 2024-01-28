@@ -55,6 +55,16 @@ const DialogCategory: FC = () => {
           />
         </div>
         <div>
+              <input
+                id="favorite"
+                type="checkbox"
+                checked={!!selected.favorite}
+                name="favorite"
+                onChange={onChange}
+              />
+              <label htmlFor="favorite">Categorie favorie</label>
+            </div>
+        <div>
           {loadingUpdateCategory ? (
             <div className="skeleton horizontal" />
           ) : (

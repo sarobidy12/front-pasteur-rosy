@@ -155,7 +155,7 @@ const usePicture = (albumCurrent?: string) => {
   };
 
   const saveFavoriteAlbum = async () => {
-    return callApi("album/favory", "PATCH", {
+    return callApi("album/favorite", "PATCH", {
       album: state.listAlbum.filter((x: any) => x.favorite),
     });
   };

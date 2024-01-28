@@ -13,7 +13,7 @@ interface Props {
 
 const Chip: React.FC<Props> = ({ date }) => {
   return (
-    <div className={`${styles.chip} ${rowdies_.className}`}>
+    <div className={`${styles.chip} ${rowdies_.className}`} data-aos="flip-up">
       <h1>{moment(date).format("DD")}</h1>
       <h2>{moment(date).format("MMMM")}</h2>
     </div>

@@ -14,7 +14,7 @@ const Card: FC<Ichild> = React.memo(async function child({
   description,
 }) {
   return (
-    <Link href={href} className={style.card}>
+    <Link href={href} className={style.card} data-aos="zoom-in">
       <div className={style.content}>
         <h2 className={style.title}>{title}</h2>
         {description && <p className={style.description}>{description}</p>}

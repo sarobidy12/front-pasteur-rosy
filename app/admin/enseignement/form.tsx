@@ -43,6 +43,7 @@ const DialogTeaching: FC = () => {
                 placeholder="Ajouter un titre"
                 value={selected?.title || ""}
                 onChange={handleChange}
+                disabled={selected.type !== "create"}
               />
             </div>
 
@@ -69,7 +70,6 @@ const DialogTeaching: FC = () => {
               <label htmlFor="linkVideo">Ajouter une url video</label>
               <input
                 type="text"
-                required={true}
                 className="input-admin"
                 name="linkVideo"
                 placeholder="Ajouter une url video (Youtube/TikTok)"
@@ -97,6 +97,16 @@ const DialogTeaching: FC = () => {
                 folder="bestCkristiant"
                 path={selected.path || ""}
               />
+            </div>
+            <div>
+              <input
+                id="favorite"
+                type="checkbox"
+                checked={!!selected.favorite}
+                name="favorite"
+                onChange={handleChange}
+              />
+              <label htmlFor="favorite">Enseigenement favorie</label>
             </div>
             {loadingUpdated ? (
               <div className="skeleton line" />

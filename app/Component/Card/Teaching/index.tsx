@@ -12,6 +12,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ imageUrl, title, description, link }) => {
   return (
     <Link
+    data-aos="zoom-in"
       href={link}
       className={styles.card}
       aria-describedby="describe-card-teaching"

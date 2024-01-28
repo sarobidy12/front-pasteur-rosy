@@ -16,8 +16,8 @@ const Content = memo(function Content() {
       <div className="head">
         <div className="container">
           <input type="text" onChange={handleChange} className="inputSearch" />
-          <h2 className="text-white">Enseignement.</h2>
-          <p className="text-white">
+          <h2 className="text-white" data-aos="zoom-in">Enseignement.</h2>
+          <p className="text-white" data-aos="zoom-in">
             L'enseignement est le moyen principal par lequel les connaissances
             sont transmises d'une génération à l'autre. Il permet la
             préservation et la diffusion des découvertes, des idées et des

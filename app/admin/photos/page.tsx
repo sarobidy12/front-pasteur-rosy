@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import style from "../admin.module.css";
 import AddAlbum from "@/app/admin/Component/Card/Photo/add.album";
 import Album from "@/app/admin/Component/Card/Photo/album";
-import DialogFavory from "./dialogFavory";
+import Dialogfavorite from "./dialogfavorite";
 import DialogAddAlbum from "./dialogAddAlbum";
 import usePicture from "@/app/Store/Picture";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const AdminPhoto = () => {
           </Link>
           <h2>Les albums</h2>
         </div>
-        <label onClick={handleToggleModal("favory")}>
+        <label onClick={handleToggleModal("favorite")}>
           <span className="material-symbols-outlined">star_half</span>
         </label>
       </div>
@@ -42,9 +42,9 @@ const AdminPhoto = () => {
           </div>
         </div>
       )}
-      <DialogFavory
-        open={!!openDialog?.favory}
-        handleClose={handleToggleModal("favory")}
+      <Dialogfavorite
+        open={!!openDialog?.favorite}
+        handleClose={handleToggleModal("favorite")}
       />
       <DialogAddAlbum
         open={!!openDialog?.addAlbum}

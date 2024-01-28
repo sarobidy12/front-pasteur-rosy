@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ProviderRedux from "./Store/Provider";
 import Header from "./Component/Header/index";
+import Footer from "./Component/Footer";
 import { Raleway } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import moment from "moment";
@@ -46,6 +47,7 @@ export default function RootLayout({
           <ProviderRedux>
             <Header />
             {children}
+            <Footer />
           </ProviderRedux>
         </div>
       </body>

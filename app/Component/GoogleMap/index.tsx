@@ -50,7 +50,7 @@ const GoogleMapView: FC<IGoogleMapView> = ({ place }) => {
       //   lat,
       //   lng,
       // }}
-      zoom={18}
+      zoom={17}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
