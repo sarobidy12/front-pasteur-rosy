@@ -48,12 +48,23 @@ const useTeaching = () => {
 
   const handleChange = (params: any) => {
     const { name, checked, value } = params.target;
+
+    console.log("checked", checked);
     const newData = {
       ...state.selected,
       [name]: checked !== undefined ? checked : value,
     };
     setSelected({
       ...newData,
+    });
+  };
+
+  const handleChecked = (params: any) => {
+    const { name, checked } = params.target;
+
+    setSelected({
+      ...state.selected,
+      [name]: checked,
     });
   };
 
@@ -161,6 +172,7 @@ const useTeaching = () => {
     handleChangeImage,
     setDescription,
     toggleOpenDialog,
+    handleChecked,
     createNew,
     onSelect,
     ...state,

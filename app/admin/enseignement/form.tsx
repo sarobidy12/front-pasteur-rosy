@@ -23,6 +23,7 @@ const DialogTeaching: FC = () => {
     openDialog,
     toggleOpenDialog,
     onDelete,
+    handleChecked
   } = useTeaching();
   return (
     <Dialog onClose={toggleOpenDialog} open={openDialog} fullWidth={true}>
@@ -94,7 +95,7 @@ const DialogTeaching: FC = () => {
               <UplaodFile
                 name="path"
                 onChange={handleChange}
-                folder="bestCkristiant"
+                folder="teaching"
                 path={selected.path || ""}
               />
             </div>
@@ -104,7 +105,7 @@ const DialogTeaching: FC = () => {
                 type="checkbox"
                 checked={!!selected.favorite}
                 name="favorite"
-                onChange={handleChange}
+                onChange={handleChecked}
               />
               <label htmlFor="favorite">Enseigenement favorie</label>
             </div>

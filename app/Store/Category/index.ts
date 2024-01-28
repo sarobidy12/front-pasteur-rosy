@@ -50,6 +50,14 @@ const useCategory = () => {
     });
   };
 
+  const onChecked = (e: any) => {
+    const { name, checked } = e.target;
+    setSelected({
+      ...state.selected,
+      [name]: checked,
+    });
+  };
+
   const getCategory = async () => {
     setLoading(true);
     setListCategory([]);
@@ -136,6 +144,7 @@ const useCategory = () => {
     onSelect,
     setSelected,
     onCreate,
+    onChecked,
     ...state,
   };
 };
