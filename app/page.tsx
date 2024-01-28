@@ -14,9 +14,8 @@ export default function Home() {
       <Discover />
       <Podcast />
       <TeachingFavory />
-      {/*
       <Event />
-      <ImageContent /> */}
+      <ImageContent />
     </>
   );
 }
