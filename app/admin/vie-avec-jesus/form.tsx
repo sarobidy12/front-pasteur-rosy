@@ -3,18 +3,16 @@ import React, { FC } from "react";
 import Dialog from "@/app/admin/Component/Dialog";
 import useLifeWithJesus from "@/app/Store/LifeWithJesus";
 import UplaodFile from "@/app/admin/Component/UplaodFile/oneFile";
-import dynamic from "next/dynamic";
 import style from "@/app/admin/admin.module.css";
-import Editor from "@/app/admin/Component/Editor";
+import dynamic from "next/dynamic";
 
+const Editor = dynamic(() => import("@/app/admin/Component/Editor"), {
+  loading: () => <p>Chargement...</p>,
+  ssr: false,
+});
 interface Props {
   modalId: string;
 }
-
-// const Editor = dynamic(() => import("@/app/admin/Component/Editor"), {
-//   loading: () => <p>Chargement...</p>,
-//   ssr: false,
-// });
 
 const DialogBestCkristian: FC<Props> = ({ modalId }) => {
   const {

@@ -2,8 +2,13 @@
 import React, { FC } from "react";
 import Dialog from "@/app/admin/Component/Dialog";
 import useThinkingPastor from "@/app/Store/ThinkingPastor";
-import Editor from "@/app/admin/Component/Editor";
 import style from "@/app/admin/admin.module.css";
+import dynamic from "next/dynamic";
+
+const Editor = dynamic(() => import("@/app/admin/Component/Editor"), {
+  loading: () => <p>Chargement...</p>,
+  ssr: false,
+});
 
 const DialogQuePenseTuPasteur: FC = () => {
   const {

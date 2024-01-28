@@ -3,8 +3,13 @@ import React, { FC } from "react";
 import Dialog from "@/app/admin/Component/Dialog";
 import useEvent from "@/app/Store/Event";
 import UplaodFile from "@/app/admin/Component/UplaodFile/oneFile";
-import Editor from "@/app/admin/Component/Editor";
 import style from "@/app/admin/admin.module.css";
+import dynamic from "next/dynamic";
+
+const Editor = dynamic(() => import("@/app/admin/Component/Editor"), {
+  loading: () => <p>Chargement...</p>,
+  ssr: false,
+});
 
 const DialogBestCkristian: FC = () => {
   const {
