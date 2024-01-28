@@ -34,7 +34,7 @@ const Hero: FC = () => {
           </div>
           <div className="display-inline">
             <Link
-              href="https://cal.com/ranaivomanana-tahiana/prise-de-contact"
+              href="https://cal.com/ranaivomanana-tahiana/rendez-avec-pasteur-rosy"
               className={`${styles.link} ${styles.empty}`}
               data-aos="zoom-in-up"
               target="_blank"
