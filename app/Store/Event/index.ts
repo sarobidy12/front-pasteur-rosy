@@ -78,6 +78,7 @@ const useEvent = () => {
         description: state.description,
       });
       setListEvent([{ ...data }, ...state.listEvent]);
+      handleToggle();
     } catch (err) {
       console.error(err);
     } finally {

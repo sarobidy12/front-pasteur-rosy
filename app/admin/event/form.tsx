@@ -13,7 +13,7 @@ const Editor = dynamic(() => import("@/app/admin/Component/Editor"), {
 
 const DialogBestCkristian: FC = () => {
   const {
-    loadingUpdated,
+    loadingListEventCategory,
     onChange,
     onSubmit,
     selected,
@@ -126,7 +126,7 @@ const DialogBestCkristian: FC = () => {
               />
             </div>
 
-            {loadingUpdated ? (
+            {loadingListEventCategory ? (
               <div className="skeleton line" />
             ) : (
               <>

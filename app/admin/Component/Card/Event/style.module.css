@@ -1,7 +1,8 @@
 /* PlantCard.module.css */
 .card {
-    display: flex;
-    flex: 0 0 auto;
+  display: grid;
+    gap: 10px;
+    grid-template-columns: 20% auto;
     background: #444444bd;
     width: 100%;
     margin: 15px 0;
@@ -11,19 +12,27 @@
     height: 200px;
   }
 
+  @media only screen and (max-width: 425px) {
+    .card{
+      display: block;
+      height: auto;
+    }
+}
+
   .card:hover {
     background: #44444456;
   }
   
   .cardPicWrap {
-    border-radius: 5px 0 0 5px;
-    width: 200PX;
-    flex: 0 0 auto;
+    width: 95%;
+    height: 250px;
     position: relative;
+    margin: 1vh;
+    border-radius: 10px;
   }
-  
+    
   .cardPicWrap img {
-    position: absolute; 
+    border-radius: 10px;
   }
   
   .cardContent {

@@ -21,8 +21,7 @@ const PlantCard: React.FC<PlantCardProps> = ({
         <Image
           src={imageUrl}
           alt={`Plant: ${title}`}
-          width={200}
-          height={200}
+          fill={true}
         />
       </div>
       <div className={styles.cardContent}>
