@@ -35,7 +35,7 @@ const Admin = () => {
             <span className="material-symbols-outlined">escalator_warning</span>
           }
           title="Témoignage de la vie avec Jésus"
-          description="Partage a travair un temoignage comment Jesus a changer leur vie."
+          description="Partage a travers un temoignage comment Jesus a changer leur vie."
           href="/admin/vie-avec-jesus"
         />
         <Card
@@ -95,7 +95,7 @@ const Admin = () => {
             <span className="material-symbols-outlined">support_agent</span>
           }
           title="Support"
-          description="Des problemes et anomalie durrant l'utilisation, le support est la pour vous assister et assurrer que tout fonctionnement correctement."
+          description="Des problemes et anomalie ? durrant l'utilisation, le support est la pour vous assister et assurrer que tout fonctionnement correctement vous assister en cas de probleme."
           href="/admin/Support"
         />
       </div>
