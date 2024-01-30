@@ -7,7 +7,11 @@ const Redirect = () => {
 
   const { push } = useRouter();
 
-  return <div>redirect</div>;
+  if (!info?._id) {
+    return push("/se-connecter");
+  }
+
+  return <div />;
 };
 
 export default Redirect;

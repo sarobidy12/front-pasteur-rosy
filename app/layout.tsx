@@ -6,9 +6,10 @@ import { Raleway } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import moment from "moment";
 import { img } from "@/app/Utils/img";
+import Head from "next/head";
+import Provider from "@/app/Component/Provider";
 import "./globals.css";
 import "./globals.icon.css";
-import Head from "next/head";
 
 moment.locale("fr");
 
@@ -26,7 +27,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -34,9 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        scr
-      </Head>
+      <Head>scr</Head>
       <body>
         <NextTopLoader
           color="#f8b83f"
@@ -50,9 +48,11 @@ export default function RootLayout({
         />
         <div className={raleway.className}>
           <ProviderRedux>
-            <Header />
-            {children}
-            <Footer />
+            <Provider>
+              <Header />
+              {children}
+              <Footer />
+            </Provider>
           </ProviderRedux>
         </div>
       </body>

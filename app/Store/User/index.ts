@@ -19,12 +19,16 @@ const useUser = () => {
     dispatch(UserSlice.actions.setLoading(params));
   };
 
+  const VerifyIfConnected = () => {
+    const info = JSON.parse(sessionStorage.getItem("user")) || {};
+    setInfo(info);
+  };
+
   const setCount = (params: number) => {
     dispatch(UserSlice.actions.setCount(params));
   };
 
   const toggleOpenDialog = () => {
-    console.log("call");
     dispatch(UserSlice.actions.setOpenDialog(!state.openDialog));
   };
 
@@ -343,6 +347,7 @@ const useUser = () => {
     getTotalUser,
     onDelete,
     toggleOpenDialog,
+    VerifyIfConnected,
     ...state,
   };
 };

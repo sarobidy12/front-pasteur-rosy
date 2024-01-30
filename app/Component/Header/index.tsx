@@ -59,52 +59,60 @@ const Header = () => {
                 </Link>
               )}
 
-              {info._id ? (
-                <Link
-                  href="/mon-compte"
-                  className={`${styles.sign} ${styles.linkIcon}`}
-                >
-                  {info.img ? (
-                    <>
-                      <Image
-                        src={img(info.img)}
-                        alt={info.lastName}
-                        width={25}
-                        height={25}
-                      />
-                    </>
-                  ) : (
-                    <>
-                      {info.gender === "homme" ? (
-                        <span className="material-symbols-outlined">face</span>
-                      ) : (
-                        <span className="material-symbols-outlined">
-                          face_3
-                        </span>
-                      )}
-                    </>
-                  )}
-                  Mon compte
-                </Link>
+              {info.loading ? (
+                <div className="skeleton line" />
               ) : (
-                <div className={styles.containerSign}>
-                  <Link
-                    href="/se-connecter"
-                    className={`${styles.login} ${styles.linkIcon}`}
-                  >
-                    <span className="material-symbols-outlined">login</span>
-                    Se connecter
-                  </Link>
-                  <Link
-                    href="/s-inscrire"
-                    className={`${styles.sign} ${styles.linkIcon}`}
-                  >
-                    <span className="material-symbols-outlined">
-                      connect_without_contact
-                    </span>
-                    S&apos;inscrire
-                  </Link>
-                </div>
+                <>
+                  {info._id ? (
+                    <Link
+                      href="/mon-compte"
+                      className={`${styles.sign} ${styles.linkIcon}`}
+                    >
+                      {info.img ? (
+                        <>
+                          <Image
+                            src={img(info.img)}
+                            alt={info.lastName}
+                            width={25}
+                            height={25}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          {info.gender === "homme" ? (
+                            <span className="material-symbols-outlined">
+                              face
+                            </span>
+                          ) : (
+                            <span className="material-symbols-outlined">
+                              face_3
+                            </span>
+                          )}
+                        </>
+                      )}
+                      Mon compte
+                    </Link>
+                  ) : (
+                    <div className={styles.containerSign}>
+                      <Link
+                        href="/se-connecter"
+                        className={`${styles.login} ${styles.linkIcon}`}
+                      >
+                        <span className="material-symbols-outlined">login</span>
+                        Se connecter
+                      </Link>
+                      <Link
+                        href="/s-inscrire"
+                        className={`${styles.sign} ${styles.linkIcon}`}
+                      >
+                        <span className="material-symbols-outlined">
+                          connect_without_contact
+                        </span>
+                        S&apos;inscrire
+                      </Link>
+                    </div>
+                  )}
+                </>
               )}
             </nav>
           </div>
