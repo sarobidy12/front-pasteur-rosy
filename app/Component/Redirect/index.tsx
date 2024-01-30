@@ -1,14 +1,13 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { redirect } from 'next/navigation'
+
 import useUser from "@/app/Store/User";
 
 const Redirect = () => {
   const { info } = useUser();
 
-  const { push } = useRouter();
-
   if (!info?._id) {
-    return push("/se-connecter");
+    redirect("/se-connecter");
   }
 
   return <div />;

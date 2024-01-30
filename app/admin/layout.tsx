@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Provider from "@/app/admin/Component/Provider";
 import style from "./admin.module.css";
 
 export const metadata: Metadata = {
@@ -11,5 +12,9 @@ export default function adminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div id="admin" className={style.body}>{children}</div>;
+  return (
+    <div id="admin" className={style.body}>
+      <Provider>{children}</Provider>
+    </div>
+  );
 }
