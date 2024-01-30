@@ -35,6 +35,7 @@
 .grid{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 @media (max-width: 450px) {
@@ -50,7 +51,20 @@
     width: calc(20%);
 }
 
+.itemCardLoading{
+    width: calc(23%);
+    margin: 1%;
+}
+
 @media (max-width: 450px) {
+
+    .itemCardLoading{
+        width: 200px;
+        height: 150px;
+        margin: 0.5%;
+        display: inline;
+    }
+    
     .itemCard{
         width: 300px;
         display: inline;

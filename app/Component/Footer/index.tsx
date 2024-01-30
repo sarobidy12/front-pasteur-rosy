@@ -1,18 +1,41 @@
 "use client";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { useState } from "react";
 import style from "./style.module.css";
 import { Rowdies } from "next/font/google";
 import { usePathname } from "next/navigation";
+import { callApi } from "@/app/Utils/api";
 
 const rowdies_ = Rowdies({ subsets: ["latin"], weight: "700" });
 
 const Footer = () => {
+  const [loading, setLoading] = useState(false);
+  const [selected, setSelected] = useState({});
   const path = usePathname();
 
   if (path.includes("/admin")) {
     return <></>;
   }
+
+  const handleChange = (e: any) => {
+    setSelected((select) => ({
+      ...select,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setLoading(true);
+    try {
+      await callApi("newLetter/add", "POST", { ...selected });
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -26,20 +49,26 @@ const Footer = () => {
           dévoilera les coulisses, les projets et les nouveautés en exclusivité
           ! Restez connecté(e) !
         </p>
-        <form>
+        <form onSubmit={onSubmit}>
           <input
             type="text"
             name="name"
             placeholder="Votre prenom"
+            onChange={handleChange}
             required={true}
           />
           <input
             type="email"
-            name="name"
+            name="email"
             required={true}
+            onChange={handleChange}
             placeholder="Votre address e-mail"
           />
-          <button type="submit">Je m'inscris!</button>
+          {loading ? (
+            <div className="skeleton chip" />
+          ) : (
+            <button type="submit">Je m'inscris!</button>
+          )}
         </form>
       </div>
       <div className={style.footer}>

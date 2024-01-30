@@ -44,7 +44,9 @@ const Content = memo(function Content() {
             </>
           }
         >
-          <Child page={page} filter={filter} category={category} />
+          <div className=" list-content">
+            <Child page={page} filter={filter} category={category} />
+          </div>
         </Suspense>
         <div className="space-between-center">
           <button

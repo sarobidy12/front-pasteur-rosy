@@ -1,10 +1,15 @@
 
 .share{
     font-size: 15px;
-    color: white;
-    margin: 2vh 0 0 0;
+    color: #048b9a;
+    margin: 2vh 0;
+    text-align: center;
 }
 
+.share a:hover{
+    transition: 0.6ms;
+    transform: scale(1.2); 
+}
 .share span{ 
     font-size: 10px;
     margin-left: 5px;

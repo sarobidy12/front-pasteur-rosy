@@ -37,13 +37,19 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .flex-row-center{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     flex-direction: row;
+}
+
+.color-red{
+    color: rgba(255, 81, 0, 0.781);
 }
 
 .flex-column-center{
@@ -106,7 +112,7 @@ html {
     cursor: pointer;
 }
 
-.list-admin{
+.list-content{
     width: 100%;
     min-height: 70vh;
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useCallback } from "react";
+import React, { FC } from "react";
 import Dialog from "@/app/admin/Component/Dialog";
 import usePodcast from "@/app/Store/Podcast";
 import UplaodFile from "@/app/admin/Component/UplaodFile/oneFile";
@@ -72,6 +72,7 @@ const DialogCategory: FC = () => {
               folder="podcast"
               path={selected.urlUpload || ""}
               placeHolder="Ajouter une audio"
+              type="audio"
             />
           </div>
           <div>
@@ -83,12 +84,14 @@ const DialogCategory: FC = () => {
                   {selected.type === "create" ? "Enregistrer" : "Modifer"}
                 </button>
                 {selected.type !== "create" ? (
-                  <button
-                    className="btn-delete-admin"
-                    onClick={onDelete(selected._id)}
-                  >
-                    Supprimer
-                  </button>
+                  <div className="flex-row-center">
+                    <button
+                      className="btn-delete-admin"
+                      onClick={onDelete(selected._id)}
+                    >
+                      Supprimer
+                    </button>
+                  </div>
                 ) : (
                   <></>
                 )}

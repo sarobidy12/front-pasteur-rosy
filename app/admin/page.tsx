@@ -1,6 +1,12 @@
 import React from "react";
 import style from "./admin.module.css";
 import Card from "@/app/admin/Component/Card/Module";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Administration",
+  description: "Administration",
+};
 
 const Admin = () => {
   return (
@@ -89,6 +95,24 @@ const Admin = () => {
           title="Enseignement"
           description="Administrer les enseignements."
           href="/admin/enseignement"
+        />
+        <Card
+          icon={<span className="material-symbols-outlined">history_edu</span>}
+          title="NewLetter"
+          description="Partager les pensees du jour."
+          href="/admin/newLetter"
+        />
+        <Card
+          icon={<span className="material-symbols-outlined">badge</span>}
+          title="Utilisateur"
+          description="Administrer les utilisateur."
+          href="/admin/utilisateur"
+        />
+        <Card
+          icon={<span className="material-symbols-outlined">auto_stories</span>}
+          title="Parole du jour"
+          description="Administrer les paroles du jour."
+          href="/admin/parole-du-jour"
         />
         <Card
           icon={

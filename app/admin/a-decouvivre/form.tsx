@@ -28,7 +28,8 @@ const DialogDiscover: FC = () => {
   return (
     <Dialog onClose={toggleOpenDialog} open={openDialog} fullWidth={true}>
       <h2 className="text-center">
-        {selected.type === "create" ? "Ajouter un" : "Modifer ce"} a decouvrire
+        {selected.type === "create" ? "Ajouter un" : "Modifer cette"} a
+        decouvrire
       </h2>
       <div>
         <div className={style.flexContent}>
@@ -94,12 +95,14 @@ const DialogDiscover: FC = () => {
                   {selected.type === "create" ? "Enregistrer" : "Modifer"}
                 </button>
                 {selected.type !== "create" ? (
-                  <button
-                    className="btn-delete-admin"
-                    onClick={onDelete(selected._id)}
-                  >
-                    Supprimer
-                  </button>
+                  <div className="flex-row-center">
+                    <button
+                      className="btn-delete-admin"
+                      onClick={onDelete(selected._id)}
+                    >
+                      Supprimer
+                    </button>
+                  </div>
                 ) : (
                   <></>
                 )}

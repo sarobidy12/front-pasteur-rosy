@@ -125,6 +125,11 @@ const Sign: React.FC = () => {
                 <Link href="/condition-general-utilisation">CGU</Link>
               </label>
             </div>
+            <div className={style.login} data-aos="zoom-in">
+              <p data-aos="zoom-in">
+                Deja un compte ? <Link href="/se-connecter">se connecter</Link>
+              </p>
+            </div>
             <div data-aos="zoom-in">
               {loading ? (
                 <div className="skeleton line" />

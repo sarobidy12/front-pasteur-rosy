@@ -15,7 +15,7 @@ const Quote = () => {
 
   const getSpeackOfDay = async () => {
     try {
-      const fetching = await fetch(`${urlApi}/speackOfDay`, {
+      const fetching = await fetch(`${urlApi}/wordOfDay`, {
         cache: "no-store",
       });
       const response: any = await fetching.json();
@@ -31,15 +31,15 @@ const Quote = () => {
   }, []);
 
   const handleClose = () => setClose(false);
-  
+
   if (!close) {
     return;
   }
-  
+
   return (
     <div className={style.containter}>
       <h2>Parole du jour</h2>
-      <p className={DM_Serif_Display_.className}>{quote?.text}</p>
+      <p className={DM_Serif_Display_.className}>{quote?.content}</p>
       <b>{quote?.verse}</b>
       <br />
       <button onClick={handleClose}>Fermer</button>

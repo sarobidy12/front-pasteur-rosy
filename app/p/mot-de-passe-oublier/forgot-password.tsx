@@ -9,20 +9,20 @@ const ForgotPassword: React.FC = () => {
   return (
     <>
       <Error_ />
-      {info.token ? (
-        <div className={style.rootCenter}>
-          <div>
-            <span className="material-symbols-outlined">mail_lock</span>
+      <div className={style.root}>
+        {info.token ? (
+          <div className="flex-column-center">
+            <div>
+              <span className="material-symbols-outlined">mail_lock</span>
+            </div>
+            <div>
+              <p className={style.textComfirm} data-aos="zoom-in">
+                Un email a ete envoyer, qui contient les elements pour
+                renitialiser votre mot de passe.
+              </p>
+            </div>
           </div>
-          <div>
-            <p className={style.textComfirm} data-aos="zoom-in">
-              Un email a ete envoyer, qui contient les elements pour
-              renitialiser votre mot de passe.
-            </p>
-          </div>
-        </div>
-      ) : (
-        <div className={style.root}>
+        ) : (
           <form onSubmit={onSendMailResetPassowrd}>
             <span className="material-symbols-outlined">lock_open</span>
             <p className={style.textComfirm} data-aos="zoom-in">
@@ -39,15 +39,15 @@ const ForgotPassword: React.FC = () => {
               />
             </div>
             {loading ? (
-              <div className="skeleton line" />
+              <div className="skeleton chip" />
             ) : (
               <button data-aos="zoom-in" type="submit">
                 Réinitialiser{" "}
               </button>
             )}
           </form>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 };

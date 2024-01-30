@@ -5,7 +5,7 @@ import Error from "@/app/Component/Error";
 
 const Error_: React.FC = () => {
   const { info, setInfo } = useUser();
-  const handleClose = () => setInfo({ ...info, err: false });
+  const handleClose = () => setInfo({ ...info, error: false });
   return (
     <Error open={info.error} onClose={handleClose}>
       <p>{info.error}</p>

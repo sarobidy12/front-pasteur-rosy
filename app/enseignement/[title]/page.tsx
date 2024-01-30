@@ -39,7 +39,7 @@ const page: FC<Props> = async ({ params }) => {
   );
 
   const currentLive = await fetching.json();
-    return (
+  return (
     <>
       <div className="head">
         <div className="container">
@@ -68,7 +68,6 @@ const page: FC<Props> = async ({ params }) => {
               />
             )}
           </div>
-          <Share />
         </div>
       </div>
       <div className="container">
@@ -76,6 +75,7 @@ const page: FC<Props> = async ({ params }) => {
         <div className={style.content}>
           <PreviewRenderer data={currentLive.description} />
         </div>
+        <Share />
       </div>
     </>
   );

@@ -63,12 +63,14 @@ const DialogQuePenseTuPasteur: FC = () => {
                 <button type="submit" className="btn-admin">
                   Enregistrer
                 </button>
-                <button
-                  className="btn-delete-admin"
-                  onClick={onDelete(selected._id)}
-                >
-                  Supprimer
-                </button>
+                <div className="flex-row-center">
+                  <button
+                    className="btn-delete-admin"
+                    onClick={onDelete(selected._id)}
+                  >
+                    Supprimer
+                  </button>
+                </div>
               </>
             )}
           </div>

@@ -7,7 +7,6 @@ import { urlApi } from "@/app/Utils/api";
 import Loading from "./loading";
 import { img } from "@/app/Utils/img";
 
-
 const rowdies_ = Rowdies({ subsets: ["latin"], weight: "700" });
 
 const Index = () => {
@@ -23,10 +22,9 @@ const Index = () => {
       const response: any = await fetching.json();
       setTeaching(response);
       setLoading(false);
-
     } catch (err: any) {
       console.error(err);
-    }  
+    }
   };
 
   useEffect(() => {

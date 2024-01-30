@@ -8,6 +8,10 @@ export const UserSlice = createSlice({
   initialState: {
     info: {},
     loading: false,
+    loadingUpdate: false,
+    openDialog: false,
+    list: [],
+    count: 0,
   },
   reducers: {
     setInfo: (state, action: PayloadAction<any>) => {
@@ -15,6 +19,18 @@ export const UserSlice = createSlice({
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload;
+    },
+    setLoadingUpdate: (state, action: PayloadAction<boolean>) => {
+      state.loadingUpdate = action.payload;
+    },
+    setList: (state, action: PayloadAction<any>) => {
+      state.list = action.payload;
+    },
+    setOpenDialog: (state, action: PayloadAction<boolean>) => {
+      state.openDialog = action.payload;
+    },
+    setCount: (state, action: PayloadAction<number>) => {
+      state.count = action.payload;
     },
   },
 });

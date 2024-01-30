@@ -44,7 +44,7 @@ const DialogAddAlbum: FC<IdialogAddAlbum> = ({ open, handleClose }) => {
           />
         </div>
         {loading ? (
-          <div className="skeleton horizontal" />
+            <div className="skeleton line" />
         ) : (
           <button className="btn-admin" type="submit">
             Enregistrer

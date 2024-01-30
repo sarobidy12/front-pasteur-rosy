@@ -1,0 +1,9 @@
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+.button span{
+    font-size: 5rem;
+    color: white;
+}

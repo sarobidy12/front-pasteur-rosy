@@ -23,7 +23,7 @@ const DialogTeaching: FC = () => {
     openDialog,
     toggleOpenDialog,
     onDelete,
-    handleChecked
+    handleChecked,
   } = useTeaching();
   return (
     <Dialog onClose={toggleOpenDialog} open={openDialog} fullWidth={true}>
@@ -117,12 +117,14 @@ const DialogTeaching: FC = () => {
                   {selected.type === "create" ? "Enregistrer" : "Modifer"}
                 </button>
                 {selected.type !== "create" ? (
-                  <button
-                    className="btn-delete-admin"
-                    onClick={onDelete(selected._id)}
-                  >
-                    Supprimer
-                  </button>
+                  <div className="flex-row-center">
+                    <button
+                      className="btn-delete-admin"
+                      onClick={onDelete(selected._id)}
+                    >
+                      Supprimer
+                    </button>
+                  </div>
                 ) : (
                   <></>
                 )}

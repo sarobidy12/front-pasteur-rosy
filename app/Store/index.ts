@@ -12,6 +12,7 @@ import { discoverSlice } from "./Discover/slice";
 import { teachingSlice } from "./Teaching/slice";
 import { UserSlice } from "./User/slice";
 import { MessageSlice } from "./Message/slice";
+import { wordOfDaySlice } from "./WordOfDay/slice";
 
 // config the store
 const store = configureStore({
@@ -29,6 +30,7 @@ const store = configureStore({
     teaching: teachingSlice.reducer,
     user: UserSlice.reducer,
     message: MessageSlice.reducer,
+    wordOfDay: wordOfDaySlice.reducer,
   },
 });
 

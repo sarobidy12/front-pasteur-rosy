@@ -134,18 +134,19 @@ const DialogBestCkristian: FC = () => {
                   {selected.type === "create" ? "Enregistrer" : "Modifer"}
                 </button>
                 {selected.type !== "create" ? (
-                  <button
-                    className="btn-delete-admin"
-                    onClick={onDelete(selected._id)}
-                  >
-                    Supprimer
-                  </button>
+                  <div className="flex-row-center">
+                    <button
+                      className="btn-delete-admin"
+                      onClick={onDelete(selected._id)}
+                    >
+                      Supprimer
+                    </button>
+                  </div>
                 ) : (
                   <></>
                 )}
               </>
             )}
-            
           </form>
         </div>
       </div>

@@ -67,11 +67,13 @@ const DialogCategory: FC = () => {
         </div>
         <div>
           {loadingUpdateCategory ? (
-            <div className="skeleton horizontal" />
+            <div className="skeleton line" />
           ) : (
-            <button className="btn-admin" type="submit">
-              {selected.type === "create" ? "Ajouter" : "Modifer"}
-            </button>
+            <div className="flex-row-center">
+              <button className="btn-admin" type="submit">
+                {selected.type === "create" ? "Ajouter" : "Modifer"}
+              </button>
+            </div>
           )}
         </div>
       </form>

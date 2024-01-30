@@ -8,45 +8,54 @@ const Share: FC = () => {
 
   return (
     <>
-      <h3 className={style.share}>
-        Parteger <span className="material-symbols-outlined">share</span>
-      </h3>
+      <h3 className={style.share}>Partager sur</h3>
 
-      <Link
-        target="_blank"
-        className="share-btn share-btn-twitter"
-        href={`https://twitter.com/share?url=${
-          (window as any).location.href
-        }&text=Share Buttons Demo&via=sunnyismoi`}
-        title="Share on Twitter"
-      >
-        <span className="share-btn-icon"></span>
-        <span className="share-btn-text">Twitter</span>
-      </Link>
+      <div className="flex-row-center">
+        <Link
+          target="_blank"
+          href={`https://twitter.com/share?url=${
+            (window as any).location.href
+          }&text=Share Buttons Demo&via=sunnyismoi`}
+          title="Share on Twitter"
+        >
+          <img
+            width="48"
+            height="48"
+            src="https://img.icons8.com/fluency/48/facebook-new.png"
+            alt="facebook-new"
+          />
+        </Link>
 
-      <Link
-        target="_blank"
-        className="share-btn share-btn-facebook"
-        href={`https://www.facebook.com/sharer/sharer.php?u=${
-          (window as any).location.href
-        }`}
-        title="Share on Facebook"
-      >
-        <span className="share-btn-icon"></span>
-        <span className="share-btn-text">Facebook</span>
-      </Link>
+        <Link
+          target="_blank"
+          href={`https://www.facebook.com/sharer/sharer.php?u=${
+            (window as any).location.href
+          }`}
+          title="Share on Facebook"
+        >
+          <img
+            width="48"
+            height="48"
+            src="https://img.icons8.com/color/48/twitter-circled--v1.png"
+            alt="twitter-circled--v1"
+          />
+        </Link>
 
-      <Link
-        target="_blank"
-        className="share-btn share-btn-linkedin"
-        href={`https://www.linkedin.com/shareArticle?mini=true&url=${
-          (window as any).location.href
-        }`}
-        title="Share on LinkedIn"
-      >
-        <span className="share-btn-icon"></span>
-        <span className="share-btn-text">LinkedIn</span>
-      </Link>
+        <Link
+          target="_blank"
+          href={`https://www.linkedin.com/shareArticle?mini=true&url=${
+            (window as any).location.href
+          }`}
+          title="Share on LinkedIn"
+        >
+          <img
+            width="48"
+            height="48"
+            src="https://img.icons8.com/color/48/linkedin.png"
+            alt="linkedin"
+          />
+        </Link>
+      </div>
     </>
   );
 };

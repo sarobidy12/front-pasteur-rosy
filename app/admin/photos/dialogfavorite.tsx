@@ -14,13 +14,13 @@ const Dialogfavorite: FC<IDialogfavorite> = ({ open, handleClose }) => {
   const { listAlbum, handleFavorite, saveFavoriteAlbum } = usePicture();
 
   const onSubmit = async (e: any) => {
-    console.log("onSubmit");
+  
     e.preventDefault();
     e.stopPropagation();
     console.log("2");
     setLoading(true);
     try {
-      console.log("try");
+     
       const { data } = await saveFavoriteAlbum();
       handleClose();
     } catch (err: any) {
@@ -48,7 +48,7 @@ const Dialogfavorite: FC<IDialogfavorite> = ({ open, handleClose }) => {
           </div>
         ))}
         {loading ? (
-          <div className="skeleton horizontal" />
+          <div className="skeleton line" />
         ) : (
           <button className="btn-admin" type="submit">
             Enregistrer

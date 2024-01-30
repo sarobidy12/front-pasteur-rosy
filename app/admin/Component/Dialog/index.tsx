@@ -1,6 +1,6 @@
 // src/components/Modal.js
 "use client";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect } from "react";
 import styles from "./style.module.css";
 
 interface Props {
@@ -20,11 +20,16 @@ const Modal: FC<Props> = ({
   middleWidth,
   littleWidth = true,
 }) => {
+  useEffect(() => {
+    if (open) {
+      document.getElementById("admin").style.overflow = "hidden";
+    }
 
-  // if (!open) {
-  //   return;
-  // }
-  
+    return () => {
+      document.getElementById("admin").style.overflow = "auto";
+    };
+  }, [open]);
+
   return (
     <>
       <div

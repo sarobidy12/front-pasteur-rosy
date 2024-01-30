@@ -64,7 +64,6 @@ const page: FC<Props> = async ({ params }) => {
               />
             )}
           </div>
-          <Share />
         </div>
       </div>
       <div className="container m-t-5 m-b-10">
@@ -72,6 +71,7 @@ const page: FC<Props> = async ({ params }) => {
         <div className={style.content}>
           <PreviewRenderer data={currentLive.description} />
         </div>
+        <Share />
       </div>
     </>
   );

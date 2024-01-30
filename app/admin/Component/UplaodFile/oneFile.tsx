@@ -5,6 +5,7 @@ import axios from "axios";
 import style from "./style.module.css";
 import { urlApi } from "@/app/Utils/api";
 import { img } from "@/app/Utils/img";
+import Audio from "@/app/admin/Component/Audio";
 
 interface Props {
   name: string;
@@ -12,6 +13,7 @@ interface Props {
   path: string;
   onChange: (e: any) => void;
   placeHolder?: string;
+  type?: "img" | "audio";
 }
 
 const UploadFile: FC<Props> = React.memo(function UploadFile({
@@ -20,6 +22,7 @@ const UploadFile: FC<Props> = React.memo(function UploadFile({
   path,
   placeHolder = "Ajouter une image",
   onChange,
+  type = "img",
 }) {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -67,7 +70,13 @@ const UploadFile: FC<Props> = React.memo(function UploadFile({
         <>
           <label htmlFor={`add-img-${name}`}>
             {path ? (
-              <Image src={img(path)} alt={path} width={300} height={300} />
+              <>
+                {type === "img" ? (
+                  <Image src={img(path)} alt={path} width={300} height={300} />
+                ) : (
+                  <Audio audioSrc={img(path)} />
+                )}
+              </>
             ) : (
               placeHolder
             )}

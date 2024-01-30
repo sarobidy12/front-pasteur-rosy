@@ -16,7 +16,7 @@ const Content = memo(function Content() {
           </p>
         </div>
       </div>
-      <div className="container">
+      <div className="container list-content">
         <Suspense
           fallback={
             <>

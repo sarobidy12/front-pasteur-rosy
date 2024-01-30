@@ -63,7 +63,7 @@ const ListMessage: FC<Props> = ({ canal }) => {
       <div className={style.messageContent} ref={messagesContainerRef}>
         <div className={style.getLastedMessage}>
           {loading ? (
-            "Veuillez patienter..."
+            <div className={style.loading} >Veuillez patienter...</div>
           ) : (
             <>
               {listMessage.length > 1 && (
@@ -75,10 +75,10 @@ const ListMessage: FC<Props> = ({ canal }) => {
         {listMessage.map((x: any, index: number) => (
           <Bull
             key={index}
-            avatarSrc={img(x.user.img)}
-            userName={`${x.user.firstName} ${x.user.lastName}`}
+            avatarSrc={x.user?.img ? img(x.user?.img) : ""}
+            userName={`${x?.user?.firstName || ""} ${x.user?.lastName || ""}`}
             messageText={x.message}
-            isCurrentUser={x.user._id === info._id}
+            isCurrentUser={x?.user?._id === info._id}
             date={x.createdAt}
           />
         ))}

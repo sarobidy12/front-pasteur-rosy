@@ -1,14 +1,14 @@
 .root{
     width: 50%;
     margin: 15rem auto;
+    margin-bottom: 10rem;
 }
 
 .root a{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-decoration: none;
     width: 48%;
-    float: left;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     padding: 5vh;
     font-size: 1.25rem;

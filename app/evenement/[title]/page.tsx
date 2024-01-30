@@ -8,6 +8,8 @@ import { Rowdies } from "next/font/google";
 import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { img } from "@/app/Utils/img";
+import Share from "@/app/Component/share";
+
 interface Props {
   params: { title: string };
 }
@@ -45,7 +47,7 @@ const Evenement: FC<Props> = async ({ params }) => {
   return (
     <div className="container m-b-10">
       <div className={style.root}>
-        <Chip date={currentEvent.date}  />
+        <Chip date={currentEvent.date} />
         <h1
           className={`${style.title} ${rowdies_.className}`}
           data-aos="fade-left"
@@ -64,6 +66,7 @@ const Evenement: FC<Props> = async ({ params }) => {
         {currentEvent.place && (
           <Map place={currentEvent.place} data-aos="flip-right" />
         )}
+        <Share />
       </div>
     </div>
   );

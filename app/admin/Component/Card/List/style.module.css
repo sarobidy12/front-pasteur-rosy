@@ -24,6 +24,8 @@
     height: 200px;
     margin: 1.5vh auto;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 425px) {
@@ -43,6 +45,11 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+}
+
+.cardHorizontal img{
+    margin-right: 1vh;
+    border-radius: 10px;
 }
 
 .cardHorizontal span{

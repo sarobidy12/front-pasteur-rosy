@@ -14,19 +14,19 @@ const ResetPassword: React.FC<Props> = ({ name, token }) => {
   return (
     <>
       <Error_ />
-      {info.success ? (
-        <div className={style.rootCenter}>
-          <div>
-            <span className="material-symbols-outlined">task_alt</span>
+      <div className={style.root}>
+        {info.success ? (
+          <div className="flex-column-center">
+            <div>
+              <span className="material-symbols-outlined">task_alt</span>
+            </div>
+            <div>
+              <p className={style.textComfirm} data-aos="zoom-in">
+                Votre mot de passe a bien ete modifier
+              </p>
+            </div>
           </div>
-          <div>
-            <p className={style.textComfirm} data-aos="zoom-in">
-              Votre Mot de passe a bien ete modifier
-            </p>
-          </div>
-        </div>
-      ) : (
-        <div className={style.root}>
+        ) : (
           <form onSubmit={onResetPassowrd(token)}>
             <span className="material-symbols-outlined">key</span>
             <h1 data-aos="zoom-in">{name}</h1>
@@ -61,8 +61,8 @@ const ResetPassword: React.FC<Props> = ({ name, token }) => {
               </button>
             )}
           </form>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 };

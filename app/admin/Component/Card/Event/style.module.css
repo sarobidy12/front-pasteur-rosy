@@ -9,7 +9,6 @@
     border-radius: 15px;
     cursor: pointer;
     overflow: hidden;
-    height: 200px;
   }
 
   @media only screen and (max-width: 425px) {

@@ -34,7 +34,6 @@
 @media (max-width: 450px) {
     .error{
         bottom: 0px;
-        width: 91%;
-        left: 0px;
+        width: 100%;
     }
 }

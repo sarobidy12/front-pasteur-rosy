@@ -40,14 +40,16 @@ const Content = memo(function Content() {
           <Switch onChange={handleToggle} name="switch" checked={answered} />
           <span>{answered ? "Repondu" : "Pas encore repondu"}</span>
         </div>
+        <div className=" list-content">
+          <Child
+            page={page}
+            filter={filter}
+            category={category}
+            mail={info.email}
+            answered={answered}
+          />
+        </div>
 
-        <Child
-          page={page}
-          filter={filter}
-          category={category}
-          mail={info.email}
-          answered={answered}
-        />
         <div className="space-between-center">
           <button
             onClick={back}

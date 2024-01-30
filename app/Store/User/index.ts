@@ -19,6 +19,23 @@ const useUser = () => {
     dispatch(UserSlice.actions.setLoading(params));
   };
 
+  const setCount = (params: number) => {
+    dispatch(UserSlice.actions.setCount(params));
+  };
+
+  const toggleOpenDialog = () => {
+    console.log("call");
+    dispatch(UserSlice.actions.setOpenDialog(!state.openDialog));
+  };
+
+  const setLoadingUpdate = (params: boolean) => {
+    dispatch(UserSlice.actions.setLoadingUpdate(params));
+  };
+
+  const setList = (params: any) => {
+    dispatch(UserSlice.actions.setList(params));
+  };
+
   const handleChange = (e: any) => {
     setInfo({
       ...state.info,
@@ -79,7 +96,7 @@ const useUser = () => {
     e.preventDefault();
     e.stopPropagation();
     setLoading(true);
-
+    setInfo({ ...state.info, error: false });
     if (state.info.password1.trim() !== state.info.password2.trim()) {
       setInfo({
         ...state.info,
@@ -90,6 +107,7 @@ const useUser = () => {
     try {
       const { data } = await callApi("user/comfirm", "POST", {
         email: state.info.email,
+        lastName: state.info.lastName,
       });
       handleChange({
         target: {
@@ -190,7 +208,126 @@ const useUser = () => {
     }
   };
 
+  const getList = async (filter, page) => {
+    setLoading(true);
+    try {
+      const { data } = await callApi(
+        `user?filter=${filter}&page=${page}`,
+        "GET",
+        {}
+      );
+      setList(data);
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getTotalUser = async (filter, page) => {
+    try {
+      const { data } = await callApi(`user/count`, "GET", {});
+      setCount(data.count);
+    } catch (err: any) {
+      console.error(err);
+    }
+  };
+
+  const createNew = () => {
+    setInfo({ type: "create" });
+    toggleOpenDialog();
+  };
+
+  const onSelect = (params: any) => (e: any) => {
+    setInfo({ ...params, type: "update" });
+    toggleOpenDialog();
+  };
+
+  const onDelete = (id: string) => async (e: any) => {
+    setLoadingUpdate(true);
+    try {
+      const { data } = await callApi(`user/${id}`, "DELETE", {});
+      setList(state.list.filter((x: any) => x._id !== id));
+      toggleOpenDialog();
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setLoadingUpdate(false);
+    }
+  };
+
+  const onBlock = (id: string) => async (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setLoadingUpdate(true);
+    try {
+      const { data } = await callApi(`user/block-user/${id}`, "GET", {});
+      const list = [...state.list];
+      const index = list.findIndex((e: any) => e._id === state.info._id);
+      list[index] = data;
+      setList(list);
+      toggleOpenDialog();
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setLoadingUpdate(false);
+    }
+  };
+
+  const onCreate = async () => {
+    setLoadingUpdate(true);
+    setInfo({ ...state.info, err: false });
+    try {
+      const { data } = await callApi("user/admin-create", "POST", {
+        ...state.info,
+        password: "1234@",
+      });
+      setList([...state.list, { ...data }]);
+      toggleOpenDialog();
+    } catch (err: any) {
+      setInfo({ ...state.info, err: "create" });
+      console.error(err);
+    } finally {
+      setLoadingUpdate(false);
+    }
+  };
+
+  const onPatch = async () => {
+    setLoadingUpdate(true);
+    try {
+      const { data } = await callApi(
+        `user/admin-udpdate/${state.info._id}`,
+        "PATCH",
+        {
+          ...state.info,
+        }
+      );
+      const list = [...state.list];
+      const index = list.findIndex((e: any) => e._id === state.info._id);
+      list[index] = data;
+      setList(list);
+      toggleOpenDialog();
+    } catch (err: any) {
+      console.error(err);
+    } finally {
+      setLoadingUpdate(false);
+    }
+  };
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (state.info.type === "create") {
+      onCreate();
+      return;
+    }
+    onPatch();
+  };
+
   return {
+    onSubmit,
+    createNew,
+    onSelect,
     setInfo,
     onLogin,
     onUpdate,
@@ -200,6 +337,11 @@ const useUser = () => {
     handleChange,
     onResetPassowrd,
     onSendMailResetPassowrd,
+    getList,
+    onBlock,
+    getTotalUser,
+    onDelete,
+    toggleOpenDialog,
     ...state,
   };
 };

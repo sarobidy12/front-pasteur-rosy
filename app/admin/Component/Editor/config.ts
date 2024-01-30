@@ -21,14 +21,14 @@ export const EDITOR_TOOLS = {
       levels: [2, 3, 4],
     },
   },
-  table: {
-    class: Table,
-    inlineToolbar: true,
-    config: {
-      rows: 2,
-      cols: 3,
-    },
-  },
+  // table: {
+  //   class: Table,
+  //   inlineToolbar: true,
+  //   config: {
+  //     rows: 2,
+  //     cols: 3,
+  //   },
+  // },
   paragraph: {
     placeholder: "Votre contenu ici",
     class: Paragraph,

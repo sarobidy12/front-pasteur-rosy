@@ -11,7 +11,7 @@ const loading = () => {
           <br />
         </div>
       </div>
-      <div className="container">
+      <div className="container m-t-5">
         <div className="skeleton horizontal" />
         <br />
         <div className="skeleton line" />

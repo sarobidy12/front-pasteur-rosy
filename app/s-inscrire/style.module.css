@@ -5,14 +5,16 @@
     position: relative;
     margin-top: 12.5rem;
     margin-bottom: 15rem;
+    min-height: 50vh;
 }
 
 @media (max-width: 450px) {
     .root {
       width: 100%;
       margin-top: 1.5rem;
-      margin-bottom: 6rem;
+      margin-bottom: 0;
       margin-left: 0%;
+      height: auto;
     }
 }
 
@@ -68,7 +70,7 @@
 }
 
 .root input{
-    width: 80%;
+    width: 100%;
     margin: 0.25vh 0;
     padding: 1vh 2vh;
     border-radius: 10px;
@@ -82,6 +84,7 @@
     .root input{
         height: 30px;
         width: 100%;
+        height: 50px;
     }
 }
 
@@ -119,13 +122,22 @@
 }
 
 .cgu{
-    width: 85%;
+    width: 100%;
     display: grid;
     grid-template-columns: 5% auto;
 }
 
+.login{
+    width: 100%;
+}
+    
 @media (max-width: 450px) {
     .cgu{
-        width: 98%;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .login{
+        width: 80%;
     }
 }
