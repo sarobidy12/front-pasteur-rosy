@@ -6,7 +6,7 @@ import PreviewRenderer from "@/app/Component/Html";
 import type { Metadata, ResolvingMetadata } from "next";
 import style from "./style.module.css";
 import Share from "@/app/Component/share";
-import Redirect from "./redirect";
+import Redirect from "@/app/Component/Redirect";
 
 interface Props {
   params: { id: string };

@@ -5,6 +5,7 @@ import style from "../style.module.css";
 import { Rowdies } from "next/font/google";
 import Error from "@/app/s-inscrire/Error";
 import UploadFile from "@/app/Component/UplaodFile/oneFile";
+import Redirect from "@/app/Component/Redirect";
 
 const rowdies_ = Rowdies({ subsets: ["latin"], weight: "700" });
 
@@ -94,6 +95,7 @@ const Infomation = () => {
             )}
           </div>
         </form>
+        <Redirect />
       </div>
     </>
   );

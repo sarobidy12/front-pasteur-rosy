@@ -11,13 +11,6 @@ const rowdies_ = Rowdies({ subsets: ["latin"], weight: "700" });
 
 const Profil = () => {
   const { info } = useUser();
-
-  const { push } = useRouter();
-
-  if (!info._id) {
-    push("/se-connecter");
-  }
-
   return (
     <div className={style.profil}>
       {info.img ? (

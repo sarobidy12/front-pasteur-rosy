@@ -10,17 +10,9 @@ import useUser from "@/app/Store/User";
 
 const Header = () => {
   const path = usePathname();
-  const userConnected: any =
-    typeof sessionStorage !== undefined && sessionStorage.getItem("user")
-      ? JSON.parse(sessionStorage.getItem("user"))
-      : null;
 
-  const { setInfo } = useUser();
+  const { info } = useUser();
 
-  useEffect(() => {
-    setInfo(userConnected);
-  }, []);
-  
   return (
     <>
       {!path.includes("/admin") && (
@@ -57,7 +49,7 @@ const Header = () => {
                 Podcast
               </Link>
 
-              {!userConnected._id && (
+              {!info._id && (
                 <Link
                   href="/se-connecter"
                   className={`${styles.linkMobil} ${styles.link}`}
@@ -67,23 +59,23 @@ const Header = () => {
                 </Link>
               )}
 
-              {userConnected?._id ? (
+              {info._id ? (
                 <Link
                   href="/mon-compte"
                   className={`${styles.sign} ${styles.linkIcon}`}
                 >
-                  {userConnected.img ? (
+                  {info.img ? (
                     <>
                       <Image
-                        src={img(userConnected.img)}
-                        alt={userConnected.lastName}
+                        src={img(info.img)}
+                        alt={info.lastName}
                         width={25}
                         height={25}
                       />
                     </>
                   ) : (
                     <>
-                      {userConnected.gender === "homme" ? (
+                      {info.gender === "homme" ? (
                         <span className="material-symbols-outlined">face</span>
                       ) : (
                         <span className="material-symbols-outlined">

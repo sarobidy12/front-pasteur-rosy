@@ -8,6 +8,7 @@ import moment from "moment";
 import { img } from "@/app/Utils/img";
 import "./globals.css";
 import "./globals.icon.css";
+import Head from "next/head";
 
 moment.locale("fr");
 
@@ -33,6 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        scr
+      </Head>
       <body>
         <NextTopLoader
           color="#f8b83f"

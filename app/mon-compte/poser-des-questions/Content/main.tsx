@@ -7,6 +7,7 @@ import Child from "./child";
 import Form from "./form";
 import style from "./style.module.css";
 import { useRouter } from "next/navigation";
+import Redirect from "@/app/Component/Redirect";
 
 const Content = memo(function Content() {
   const [page, setPage] = useState(1);
@@ -19,12 +20,6 @@ const Content = memo(function Content() {
   const next = (e: any) => setPage(page + 1);
   const back = (e: any) => setPage(page - 1);
   const { info } = useUser();
-
-  const { push } = useRouter();
-
-  if (!info._id) {
-    push("/se-connecter");
-  }
 
   return (
     <div>
@@ -73,6 +68,7 @@ const Content = memo(function Content() {
           </button>
         </div>
       </div>
+      <Redirect />
     </div>
   );
 });
