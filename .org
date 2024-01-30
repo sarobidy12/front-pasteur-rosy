@@ -1,6 +1,0 @@
-- Admin :
-    Creation photo : 
-        - upload photo
-        - view photo by album 
-    Delete photo :
-        - select by check box 
