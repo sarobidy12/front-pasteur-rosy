@@ -2,6 +2,7 @@
 import React, { FC, memo, useEffect } from "react";
 import UserConnected from "./Component/userConnected";
 import useUser from "@/app/Store/User";
+import { useRouter } from "next/navigation";
 import Message from "./Component/message";
 import InputMessage from "./Component/inputMessage";
 import { urlApiSocket } from "@/app/Utils/api";
@@ -24,6 +25,12 @@ const page: FC<Props> = memo(({ title, description, canal }) => {
   const { info } = useUser();
   const { getMessage } = useMessage();
 
+  const { push } = useRouter();
+
+  if (!info._id) {
+    push("/se-connecter");
+  }
+  
   const handleSend = (message: string) => {
     socket.emit("send-message", {
       path: info.img,

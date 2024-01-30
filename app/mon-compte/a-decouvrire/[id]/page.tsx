@@ -6,6 +6,7 @@ import PreviewRenderer from "@/app/Component/Html";
 import type { Metadata, ResolvingMetadata } from "next";
 import style from "./style.module.css";
 import Share from "@/app/Component/share";
+import Redirect from "./redirect";
 
 interface Props {
   params: { id: string };
@@ -41,6 +42,7 @@ const page: FC<Props> = async ({ params }) => {
 
   return (
     <div>
+      <Redirect />
       <div className="head">
         <div className="container">
           <div className={style.contentImg}>

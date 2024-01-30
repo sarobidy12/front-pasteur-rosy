@@ -53,6 +53,7 @@ const useUser = () => {
         ...state.info,
         ...data,
       });
+      sessionStorage.setItem("user", JSON.stringify(data));
       push("/mon-compte");
     } catch (err: any) {
       console.error(err);

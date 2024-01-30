@@ -9,6 +9,8 @@ import { img } from "@/app/Utils/img";
 import "./globals.css";
 import "./globals.icon.css";
 
+moment.locale("fr");
+
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,7 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-moment.locale("fr");
 
 export default function RootLayout({
   children,

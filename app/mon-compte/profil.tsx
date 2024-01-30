@@ -14,9 +14,9 @@ const Profil = () => {
 
   const { push } = useRouter();
 
-  // if (!info._id) {
-  //   push("/se-connecter");
-  // }
+  if (!info._id) {
+    push("/se-connecter");
+  }
 
   return (
     <div className={style.profil}>

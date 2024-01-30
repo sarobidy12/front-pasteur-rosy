@@ -1,8 +1,18 @@
 "use client";
-import React, { Suspense, memo, useState } from "react";
+import React, { Suspense, memo } from "react";
+import useUser from "@/app/Store/User/index";
+import { useRouter } from "next/navigation";
 import Child from "./child";
 
 const Content = memo(function Content() {
+  const { info } = useUser();
+
+  const { push } = useRouter();
+
+  if (!info._id) {
+    push("/se-connecter");
+  }
+
   return (
     <div>
       <div className="head">

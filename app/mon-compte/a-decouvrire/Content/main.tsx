@@ -1,9 +1,19 @@
 "use client";
 import React, { Suspense, memo, useState } from "react";
+import { useRouter } from "next/navigation";
+import useUser from "@/app/Store/User";
 import ListCategorie from "@/app/Component/Input/ListCategorie";
 import Child from "./child";
 
 const Content = memo(function Content() {
+  const { info } = useUser();
+
+  const { push } = useRouter();
+
+  if (!info._id) {
+    push("/se-connecter");
+  }
+
   const [page, setPage] = useState(1);
   const [filter, setFilter] = useState("");
   const [category, setCategory] = useState("");

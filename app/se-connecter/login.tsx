@@ -4,13 +4,19 @@ import style from "./style.module.css";
 import useUser from "../Store/User";
 import { Rowdies } from "next/font/google";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Error_ from "./Error";
 
 const rowdies_ = Rowdies({ subsets: ["latin"], weight: "700" });
 
 const Login: React.FC = () => {
   const { handleChange, onLogin, loading, info } = useUser();
+  const { push } = useRouter();
 
+  if (!info._id) {
+    push("/mon-compte");
+  }
+  
   return (
     <>
       <div className={style.root}>

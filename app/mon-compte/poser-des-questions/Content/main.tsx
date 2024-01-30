@@ -6,6 +6,7 @@ import Switch from "@/app/Component/Switch";
 import Child from "./child";
 import Form from "./form";
 import style from "./style.module.css";
+import { useRouter } from "next/navigation";
 
 const Content = memo(function Content() {
   const [page, setPage] = useState(1);
@@ -18,6 +19,13 @@ const Content = memo(function Content() {
   const next = (e: any) => setPage(page + 1);
   const back = (e: any) => setPage(page - 1);
   const { info } = useUser();
+
+  const { push } = useRouter();
+
+  if (!info._id) {
+    push("/se-connecter");
+  }
+
   return (
     <div>
       <div className="head">

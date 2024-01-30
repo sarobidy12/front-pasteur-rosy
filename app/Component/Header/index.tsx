@@ -1,17 +1,26 @@
 // Header.js
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
 import { usePathname } from "next/navigation";
-import useUser from "@/app/Store/User";
 import { img } from "@/app/Utils/img";
+import useUser from "@/app/Store/User";
 
 const Header = () => {
   const path = usePathname();
-  const { info } = useUser();
+  const userConnected: any =
+    typeof sessionStorage !== undefined && sessionStorage.getItem("user")
+      ? JSON.parse(sessionStorage.getItem("user"))
+      : null;
 
+  const { setInfo } = useUser();
+
+  useEffect(() => {
+    setInfo(userConnected);
+  }, []);
+  
   return (
     <>
       {!path.includes("/admin") && (
@@ -48,7 +57,7 @@ const Header = () => {
                 Podcast
               </Link>
 
-              {!info._id && (
+              {!userConnected._id && (
                 <Link
                   href="/se-connecter"
                   className={`${styles.linkMobil} ${styles.link}`}
@@ -58,23 +67,23 @@ const Header = () => {
                 </Link>
               )}
 
-              {info._id ? (
+              {userConnected?._id ? (
                 <Link
                   href="/mon-compte"
                   className={`${styles.sign} ${styles.linkIcon}`}
                 >
-                  {info.img ? (
+                  {userConnected.img ? (
                     <>
                       <Image
-                        src={img(info.img)}
-                        alt={info.lastName}
+                        src={img(userConnected.img)}
+                        alt={userConnected.lastName}
                         width={25}
                         height={25}
                       />
                     </>
                   ) : (
                     <>
-                      {info.gender === "homme" ? (
+                      {userConnected.gender === "homme" ? (
                         <span className="material-symbols-outlined">face</span>
                       ) : (
                         <span className="material-symbols-outlined">
