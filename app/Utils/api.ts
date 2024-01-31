@@ -3,7 +3,7 @@ import axios from "axios";
 type IMethod = "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "PATCH" | "OPTIONS";
 
 export const urlApi = "https://back-end-cepd.onrender.com";
-export const urlApiSocket = "ws://back-end-cepd.onrender.com";
+export const urlApiSocket = "wss://back-end-cepd.onrender.com";
 
 // export const urlApi = "http://localhost:3009";
 // export const urlApiSocket = "ws://localhost:3009";
