@@ -12,6 +12,7 @@ interface Props {
 }
 
 const Admin: FC<Props> = ({ params }) => {
+
   return <Content params={{ album: params.album }} />;
 };
 

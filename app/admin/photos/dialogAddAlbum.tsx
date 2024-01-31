@@ -32,7 +32,7 @@ const DialogAddAlbum: FC<IdialogAddAlbum> = ({ open, handleClose }) => {
   };
   return (
     <Dialog open={open} onClose={handleClose}>
-      <h2>Cree un nouvel album</h2>
+      <h2>Crée un nouvel album</h2>
       <form onSubmit={onSubmit}>
         <div>
           <input

@@ -49,20 +49,20 @@ const Header = () => {
                 Podcast
               </Link>
 
-              {!info._id && (
-                <Link
-                  href="/se-connecter"
-                  className={`${styles.linkMobil} ${styles.link}`}
-                >
-                  <span className="material-symbols-outlined">login</span>
-                  Se connecter
-                </Link>
-              )}
-
               {info.loading ? (
                 <div className="skeleton line" />
               ) : (
                 <>
+                  {!info._id && (
+                    <Link
+                      href="/se-connecter"
+                      className={`${styles.linkMobil} ${styles.link}`}
+                    >
+                      <span className="material-symbols-outlined">login</span>
+                      Se connecter
+                    </Link>
+                  )}
+
                   {info._id ? (
                     <Link
                       href="/mon-compte"

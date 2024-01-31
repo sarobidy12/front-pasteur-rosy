@@ -17,7 +17,6 @@ const Dialogfavorite: FC<IDialogfavorite> = ({ open, handleClose }) => {
   
     e.preventDefault();
     e.stopPropagation();
-    console.log("2");
     setLoading(true);
     try {
      
